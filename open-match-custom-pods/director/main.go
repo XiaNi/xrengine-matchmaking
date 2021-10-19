@@ -34,7 +34,7 @@ const (
 	// The endpoint for the Open Match Backend service.
 	omBackendEndpoint = "open-match-backend.open-match.svc.cluster.local:50505"
 	// The Host and Port for the Match Function service endpoint.
-	functionHostName       = "mm101-tutorial-matchfunction.mm101-tutorial"
+	functionHostName       = "xrengine-matchmaking-matchfunction.xrengine-matchmaking"
 	functionPort     int32 = 50502
 )
 

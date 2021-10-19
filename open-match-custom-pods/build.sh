@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # docker hub registry
-REGISTRY=xrengine
+REGISTRY=lagunalabs
 
 if [ -z "$1" ]
 then
   echo "module name is required"
 fi
 
-MODULE=mm101-tutorial-$1
+MODULE=xrengine-matchmaking-$1
 
 cd "$1" || exit
 
