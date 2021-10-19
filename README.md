@@ -30,7 +30,7 @@ eval $(minikube docker-env)
 ```
 
 ```bash
-REGISTRY=xrengine-matchmaking
+REGISTRY=lagunalabs
 
 kubectl create namespace xrengine-matchmaking
 
