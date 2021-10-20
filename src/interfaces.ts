@@ -25,9 +25,11 @@ interface OpenAPIErrorResponse {
   ]
 }
 
+type OpenAPIResult<T> = T | OpenAPIErrorResponse
+
 function isOpenAPIError(response: unknown | OpenAPIErrorResponse): response is OpenAPIErrorResponse {
   const error = response as OpenAPIErrorResponse
-  return typeof error.code !== 'undefined' && typeof error.message !== 'undefined'
+  return error && typeof error.code !== 'undefined' && typeof error.message !== 'undefined'
 }
 
 interface OpenMatchTicketAssignment {
@@ -45,6 +47,7 @@ export {
   OpenMatchTicket,
   OpenMatchTicketAssignment,
   OpenMatchTicketAssignmentResponse,
+  OpenAPIResult,
   OpenAPIErrorResponse,
   isOpenAPIError
 }
